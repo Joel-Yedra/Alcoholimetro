@@ -32,3 +32,20 @@ Este proyecto consiste en un **alcoholímetro casero** desarrollado con Arduino.
 
 El objetivo del proyecto es crear una herramienta sencilla que ayude a demostrar cómo los sensores pueden utilizarse para detectar alcohol y emitir alertas en consecuencia. Es ideal como proyecto educativo o demostración de sensores en sistemas embebidos.
 
+---
+
+##  🧐 ¿Como funciona?
+
+1. Declaramos los pines de entrada y salida que vamos a utilizar en el "void setup"  
+   ```
+   void setup() {
+
+  Serial.begin(9600);
+  pinMode(8,OUTPUT); // Led verde 
+  pinMode(7,OUTPUT); // Led rojo 
+  pinMode(4,OUTPUT); // Zumbador
+  pinMode(A0,INPUT); //sensor de gas
+}
+
+   
+
