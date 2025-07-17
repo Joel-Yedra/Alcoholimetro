@@ -30,7 +30,7 @@ Este proyecto consiste en un **alcoholímetro casero** desarrollado con Arduino.
 
 ## 🎯 Objetivo
 
-El objetivo del proyecto es crear una herramienta sencilla que ayude a demostrar cómo los sensores pueden utilizarse para detectar alcohol y emitir alertas en consecuencia. Es ideal como proyecto educativo o demostración de sensores en sistemas embebidos.
+El objetivo del proyecto es crear una herramienta sencilla que ayude a demostrar cómo los sensores pueden utilizarse para detectar alcohol y emitir alertas en consecuencia. Es ideal para la demostración de sensores en sistemas embebidos.
 
 ---
 
