@@ -34,7 +34,7 @@ El objetivo del proyecto es crear una herramienta sencilla que ayude a demostrar
 
 ---
 
-##  🧐 ¿Como funciona?
+##  🧐 Uso del programa
 
 1. Declaramos los pines de entrada y salida que vamos a utilizar en el "void setup"  
    ```
