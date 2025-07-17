@@ -1,4 +1,4 @@
-# Alcoholímetro con Arduino
+# 🥃 Alcoholímetro con Arduino
 
 Este proyecto consiste en un **alcoholímetro casero** desarrollado con Arduino. El sistema utiliza un **sensor de gas** (como el MQ-3) para detectar la presencia de alcohol en el aliento de una persona.
 
