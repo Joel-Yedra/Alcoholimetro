@@ -1,62 +1,60 @@
-# 🥃 Alcoholímetro en Arduino
+# 🥃 Arduino Breathalyzer
 
-Este proyecto consiste en un **alcoholímetro casero** desarrollado con Arduino. El sistema utiliza un **sensor de gas** (como el MQ-3) para detectar la presencia de alcohol en el aliento de una persona.
-
----
-
-## 🔧 ¿Cómo funciona?
-
-- El sensor analiza el aliento de la persona.
-- Si se detecta un nivel de alcohol por encima de un umbral:
-  - Se activa un **LED rojo**.
-  - Se enciende un *zumbador* como señal de advertencia.
-- Si no se detecta alcohol en el aliento:
-  - Se enciende un **LED verde**.
-  - El zumbador permanece apagado.
+This project consists of a homemade breathalyzer developed using Arduino. The system uses a gas sensor (such as the MQ-3) to detect the presence of alcohol in a person’s breath.
 
 ---
 
-## 🧰 Componentes utilizados
+## 🔧 How does it work?
 
-- Placa Arduino UNO
-- Sensor de gas (MQ-3 o similar)
-- LED rojo
-- LED verde
-- Zumbador
-- Resistencias
-- Cables de conexión y protoboard
+1. The sensor analyzes the person’s breath.
+
+2. If an alcohol level above a threshold is detected a red LED turns on and a buzzer is activated as a warning signal.
+
+3. If no alcohol is detected in the breath a green LED turns on and the buzzer remains off.
 
 ---
 
-## 🎯 Objetivo
+## 🧰 Components Used
 
-El objetivo del proyecto es crear una herramienta sencilla que ayude a demostrar cómo los sensores pueden utilizarse para detectar alcohol y emitir alertas en consecuencia. Es ideal para la demostración de sensores en sistemas embebidos.
+-Arduino UNO board
+-Gas sensor (MQ-3 or similar)
+-Red LED
+-Green LED
+-Buzzer
+-Resistors
+-Jumper wires and breadboard
 
 ---
 
-##  🧐 Uso del programa
+## 🎯 Objective
 
-1. Declaramos los pines de entrada y salida que vamos a utilizar en el "void setup"  
+The objective of the project is to create a simple tool that demonstrates how sensors can be used to detect alcohol and issue alerts accordingly. It is ideal for showcasing sensors in embedded systems.
+
+---
+
+##  🧐 Program Usage
+
+1. We declare the input and output pins to be used in the void setup section: 
    ```
    void setup() {
   ```
   Serial.begin(9600);
-  pinMode(8,OUTPUT); // Led verde 
-  pinMode(7,OUTPUT); // Led rojo 
-  pinMode(4,OUTPUT); // Zumbador
-  pinMode(A0,INPUT); //sensor de gas
+  pinMode(8,OUTPUT); // green LED 
+  pinMode(7,OUTPUT); // Red LED
+  pinMode(4,OUTPUT); // Buzzer
+  pinMode(A0,INPUT); //Gas sensor 
 }
  ```
-2. Declaaramos una variable que servira para guardar las lecturas que nos de el sensor y utilizamos una funcion llamada "analogRead" para obtener esas lecturas y guardarlas en esa variable
+2. We declare a variable to store the readings from the sensor, and we use a function called analogRead to obtain those readings and store them in that variable:
    
    ```
    int gas;
    gas=analogRead(A0);
    
    ```
-3. Se calibra el sensor y se obtienen lecturas en el caso en que se este detectando alcohol. Despues de realizar pruebas, se demostro que las bebibas alcoholicas tenian un valor menor a 555. Por esta razon, se decidio que en la estrcutura de control condicional "if" se diera la condicion con el valor de 555
+3. The sensor is calibrated and readings are taken in the case where alcohol is being detected. After testing, it was demonstrated that alcoholic beverages produced a value lower than 555. For this reason, it was decided that in the conditional control structure if, the condition should be set with the value 555
 
-   Cuando se cumple esta condicion se activa el zumbador y el LED rojo como señal de que se ha detectado alcohol en el aliento
+   When this condition is met, the buzzer and the red LED are activated as a signal that alcohol has been detected in the breath:
    
  ```
  if(gas>555){
@@ -71,22 +69,22 @@ El objetivo del proyecto es crear una herramienta sencilla que ayude a demostrar
 
  }
    ```
-Si la lectura no cumple con la condicion; entonces se activa el LED verde y el zumbador no se activa. Demostrando que no se ha detectado alcohol en el aliento
+If the reading does not meet the condition, then the green LED is activated and the buzzer remains off, indicating that no alcohol was detected in the breath:
 
   ```
  else{
 
-  digitalWrite(7,LOW); //Rojo
-  digitalWrite(8,HIGH); //Verde
-  digitalWrite(4,LOW); //zumbador
+  digitalWrite(7,LOW); //Red
+  digitalWrite(8,HIGH); //Green
+  digitalWrite(4,LOW); //Buzzer
 
   //Serial.println(gas);
  }
    ```
    
   ---
-  ##  📹 Video de demostracion
-  [Alcoholimetro](https://www.youtube.com/watch?v=YBYfqKSBUm4)
+  ##  📹 Demo Video
+  [Breathalyzer](https://www.youtube.com/watch?v=YBYfqKSBUm4)
 
    
 
