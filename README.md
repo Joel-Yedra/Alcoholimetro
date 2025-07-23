@@ -1,6 +1,6 @@
 # 🥃 Arduino Breathalyzer
 
-This project consists of a homemade breathalyzer developed using Arduino. The system uses a gas sensor (such as the MQ-3) to detect the presence of alcohol in a person’s breath.
+This project is a low-cost breathalyzer built using Arduino. It uses a gas sensor like the MQ-3 to detect the presence of alcohol in human breath. It’s designed as an educational and experimental tool to learn about sensors and raise awareness about alcohol consumption.
 
 ---
 
